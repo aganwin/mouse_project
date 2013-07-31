@@ -1,0 +1,151 @@
+<!DOCTYPE html>
+<html>
+<head>
+  <meta charset="UTF-8">
+  <title>Desktop Configuration Panel</title>
+  <link rel="stylesheet" href="../public/css/elusive-webfont.css">
+  <link rel="stylesheet" href="../public/css/bootstrap.css">
+  <link rel="stylesheet" href="../public/css/custom.css">
+  <script type="text/javascript" src="../public/js/jquery-1.9.1.min.js"></script>  
+  
+  
+  <style type="text/css">
+    body {
+      background-image:url('../public/img/flower_background.jpg');
+    }
+  </style>
+  <script  type="text/python" src="helloworld.py"></script>
+</head>
+
+<body>
+  <script type="text/javascript" src="app.js"></script> 
+ 
+  <div class="navbar">
+      <div class="navbar-black">                                <!--First navbar-->
+        <a class="brand">Notification Control Panel</a>
+        <i class="icon-remove-circle exitsign"></i>
+      </div>
+      <div class="navbar-grey">
+          <p class="branded" id="home-icon"><i class="icon-home"></i> Home</p>
+          <p class="branded" id="fb-icon"><i class="icon-facebook"></i> Facebook</p>
+          <p class="branded" id="gm-icon"><i class="icon-envelope"></i> Gmail</p>
+          <p class="branded" id="st-icon"><i class="icon-cog"></i> Setting</p> 
+      </div>
+  </div>
+  
+  
+  <div id="home-view">
+      <div class="row">
+        <div class="span3 offset1">
+            <h1 style="color:#65FF84;">You have...</h1>
+        </div>
+        <div class="span2">...</div>
+        <div class="span2">...</div>
+        <div class="span2">...</div>
+        <div class="span2">...</div>
+        <div class="span2">...</div>
+        <div class="span2">...</div>
+        <div class="span2">...</div>
+        <div class="span2">...</div>
+        <div class="span2">...</div>
+        <div class="span2">...</div>
+        <div class="span2">...</div>
+        <div class="span2">...</div>
+        <div class="span2 offset1">
+          <h2 style="color:#65FF84;">new notification</h2>
+        </div>
+      </div>
+      <div>
+          <i class="icon-comment starbox"></i>  
+      </div>
+      <div>
+          <p class="starbox-word">1</p>
+      </div>    
+  </div>
+  
+  <div id="facebook-view" style="display:none;">
+    <div class="row-fluid">
+      <div class="span5 offset1">
+          <form id="fb-on-off">
+            <h2 style="color:#5CCDF2;">Facebook Notification Setting</h2>
+            <div class="onoffswitch">
+                <input type="checkbox" name="onoffswitch" class="onoffswitch-checkbox" id="myonoffswitch" checked>
+                <label class="onoffswitch-label" for="myonoffswitch">
+                    <div class="onoffswitch-inner">
+                        <div class="onoffswitch-active"><div class="onoffswitch-switch">ON</div></div>
+                        <div class="onoffswitch-inactive"><div class="onoffswitch-switch">OFF</div></div>
+                    </div>
+                </label>
+            </div>
+          </form>
+      </div>
+      <div class="span6">
+        <form id="fb-led-select">
+           <h5 style="color:#5CCDF2; font-weight:bold;">1. Login Facebook to receive new notification</h5> 
+           <button type="button" class="btn btn-primary" id="fb-login-button"><div style="font-weight:bold;"><img src="../public/img/fb_icon_orange.png">Login</div></button>
+           <h5 style="color:#5CCDF2;">2. Select LED color when there is a new notification</h5> 
+           <div class="btn-group" data-toggle="buttons-radio">
+              <button type="button" class="btn btn-danger" id="setting-red"><div style="font-weight:bold;">Red</div></button>
+              <button type="button" class="btn btn-success" id="setting-green"><div style="font-weight:bold;">Green</div></button>
+              <button type="button" class="btn btn-primary" id="setting-blue"><div style="font-weight:bold;">Blue</div></button>
+           </div>
+        </form>
+        <!--<iframe src="https://www.facebook.com/plugins/like.php?href=YOUR_URL"
+        scrolling="no" frameborder="0"
+        style="border:none; width:450px; height:80px"></iframe>-->   
+      </div>
+    </div>
+  </div>
+  
+  
+  <div id="gmail-view" style="display:none;">
+    <div class="row-fluid">
+      <div class="span5 offset1">
+          <form id="fb-on-off">
+            <h2 style="color:#27FF8C;">Gmail Notification Setting</h2>
+            <div class="onoffswitch">
+                <input type="checkbox" name="onoffswitch" class="onoffswitch-checkbox" id="myonoffswitch" checked>
+                <label class="onoffswitch-label" for="myonoffswitch">
+                    <div class="onoffswitch-inner">
+                        <div class="onoffswitch-active"><div class="onoffswitch-switch">ON</div></div>
+                        <div class="onoffswitch-inactive"><div class="onoffswitch-switch">OFF</div></div>
+                    </div>
+                </label>
+            </div>
+          </form>
+      </div>
+      <div class="span6">
+        <form id="fb-led-select">
+           <h5 style="color:#27FF8C; font-weight:bold;">1. Login Gmail to receive new notification</h5> 
+           <button type="button" class="btn btn-primary" id="fb-login-button"><div style="font-weight:bold;">Login</div></button>
+           <h5 style="color:#27FF8C;">2. Select LED color when there is a new notification</h5> 
+           <div class="btn-group" data-toggle="buttons-radio">
+              <button type="button" class="btn btn-danger" id="setting-red"><div style="font-weight:bold;">Red</div></button>
+              <button type="button" class="btn btn-success" id="setting-green"><div style="font-weight:bold;">Green</div></button>
+              <button type="button" class="btn btn-primary" id="setting-blue"><div style="font-weight:bold;">Blue</div></button>
+           </div>
+        </form>
+        <!--<iframe src="https://www.facebook.com/plugins/like.php?href=YOUR_URL"
+        scrolling="no" frameborder="0"
+        style="border:none; width:450px; height:80px"></iframe>-->   
+      </div>
+    </div>
+  </div>
+  
+  <div id="setting-view" style="display:none;">
+     <div class="row-fluid">
+        <div class="span9 offset1">
+            <h4 style="color:#FFE87C;">Test Connectivity and LED</h4>
+            <div class="btn-group" data-toggle="buttons-radio">
+              <button type="button" class="btn btn-danger"><div style="font-weight:bold;">Red</div></button>
+              <button type="button" class="btn btn-success"><div style="font-weight:bold;">Green</div></button>
+              <button type="button" class="btn btn-primary"><div style="font-weight:bold;">Blue</div></button>
+            </div>
+        </div>
+     </div>
+  </div>
+  
+</body>
+</html>
+
+
